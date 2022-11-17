@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1163030518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163030519}
+  m_Layer: 0
+  m_Name: Barrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163030519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163030518}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 2.14, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2955917929421656901}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &205781537433975702
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +61,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.301, z: 0.755}
   m_LocalScale: {x: 0.13379, y: 0.39856043, z: 0.13379}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1163030519}
   m_Father: {fileID: 2914627261185080884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -93,7 +125,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 205781537433975702}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -207,6 +239,8 @@ GameObject:
   - component: {fileID: 525209989019348318}
   - component: {fileID: 8430818294734824088}
   - component: {fileID: 6905363659298998224}
+  - component: {fileID: 295013357}
+  - component: {fileID: 295013360}
   m_Layer: 0
   m_Name: Turret
   m_TagString: MainCamera
@@ -221,7 +255,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9153703445080074171}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.775, z: 1.926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -296,8 +330,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookSpeedX: 2
   lookSpeedY: 2
-  aimLimitPosY: 0
-  aimLimitPosX: 0
-  aimLimitNegY: 0
+  aimLimitPosY: -90
+  aimLimitPosX: -85
+  aimLimitNegY: 85
   aimLimitNegX: 0
   camera: {fileID: 525209989019348318}
+--- !u!114 &295013357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153703445080074171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ef449eccc3a9e408bd469e3c2dcbfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireDelay: 0.2
+  MuzzleVelocity: 200
+  Deviation: 0.5
+  AutoInheritVelocity: 1
+  UseGimballedAiming: 0
+  GimbalOnlyWhenInRange: 0
+  GimbalRange: 10
+  GimbalTarget: {x: 0, y: 0, z: 0}
+  IsSequentialFiring: 0
+  FirePoints:
+  - {fileID: 1163030519}
+  RecoilLength: 0.3
+  RecoilRecoverSpeed: 1
+  RecoilingBarrels:
+  - {fileID: 2955917929421656901}
+  BulletPrefab: {fileID: 114839090480401972, guid: 8187289c54787de4ab362ff3f019c739, type: 3}
+  MuzzleFlashPrefab: {fileID: 198050975068896738, guid: 6c9cca1c11f9abc4c886c6d9ee895b17, type: 3}
+  FireInFixed: 0
+  IsFiring: 0
+  IgnoreOwnRigidbody: 1
+  UseAmmo: 0
+  MaxAmmo: 300
+--- !u!114 &295013360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153703445080074171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b52a53c239048a4e8664b316fe9c8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guns:
+  - {fileID: 295013357}
+  GimbalTarget: {fileID: 0}

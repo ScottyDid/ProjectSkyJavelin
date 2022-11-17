@@ -1156,7 +1156,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890182498
 GameObject:
@@ -2052,11 +2052,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3acb4c43da7718f4d8d3b79956dde8fe, type: 3}
---- !u!20 &525209989651289134 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 670821856676890352, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
-  m_PrefabInstance: {fileID: 1010731970947027678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &856986086004379623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 671647539381204399, guid: 3acb4c43da7718f4d8d3b79956dde8fe, type: 3}
@@ -2069,6 +2064,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1392227011}
     m_Modifications:
+    - target: {fileID: 295013357, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: FireDelay
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 295013357, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: MuzzleVelocity
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 295013357, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: AutoInheritVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163030519, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.042
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163030519, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 2914627261185080884, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2113,18 +2128,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6905363659298998224, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
-      propertyPath: aimLimitNegY
-      value: 85
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905363659298998224, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
-      propertyPath: aimLimitPosX
-      value: -85
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905363659298998224, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
-      propertyPath: aimLimitPosY
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 9153703445080074171, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
       propertyPath: m_Name
       value: TurretFront
@@ -2138,18 +2141,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1392227011}
     m_Modifications:
-    - target: {fileID: 307034997814569432, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 525209989651289134}
-    - target: {fileID: 307034997814569432, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
-      propertyPath: aimLimitNegX
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 307034997814569432, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
-      propertyPath: aimLimitPosX
-      value: -5
-      objectReference: {fileID: 0}
     - target: {fileID: 2770841123959887258, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2236,7 +2227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9159389465066628336, guid: ddd9d7b9c03f60442b7c8e0195df516c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9159389465066628336, guid: ddd9d7b9c03f60442b7c8e0195df516c, type: 3}
       propertyPath: m_AnchorMax.x
