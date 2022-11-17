@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4425358839411348}
   m_Father: {fileID: 0}
@@ -44,17 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd03ee66d977ab24aaa93d7063eb2b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImpactFXPrefab: {fileID: 198050975068896738, guid: 766fd4072aff0774191c285677f08ec0,
-    type: 3}
-  ExplodeFXPrefab: {fileID: 198050975068896738, guid: 766fd4072aff0774191c285677f08ec0,
-    type: 3}
+  ImpactFXPrefab: {fileID: 198050975068896738, guid: 766fd4072aff0774191c285677f08ec0, type: 3}
+  ExplodeFXPrefab: {fileID: 198050975068896738, guid: 766fd4072aff0774191c285677f08ec0, type: 3}
   ChildTrails: []
   RayHitLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   TimeToLive: 5
-  GravityModifier: 0
-  AlignToVelocity: 0
+  GravityModifier: 1
+  AlignToVelocity: 1
   BulletLength: 2
   MoveInFixedUpdate: 1
   IsThick: 0
@@ -93,6 +92,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4689971211517712}
   m_RootOrder: 0
@@ -116,9 +116,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -130,6 +133,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -142,3 +146,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

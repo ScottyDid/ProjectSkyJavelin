@@ -548,60 +548,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 525209989019348318, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
   m_PrefabInstance: {fileID: 868769002630207972}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &295013357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295013352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ef449eccc3a9e408bd469e3c2dcbfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FireDelay: 0.2
-  MuzzleVelocity: 200
-  Deviation: 0.5
-  AutoInheritVelocity: 1
-  UseGimballedAiming: 0
-  GimbalOnlyWhenInRange: 0
-  GimbalRange: 10
-  GimbalTarget: {x: 0, y: 0, z: 0}
-  IsSequentialFiring: 0
-  FirePoints:
-  - {fileID: 1163030519}
-  RecoilLength: 0.3
-  RecoilRecoverSpeed: 1
-  RecoilingBarrels:
-  - {fileID: 514405939}
-  BulletPrefab: {fileID: 114839090480401972, guid: 8187289c54787de4ab362ff3f019c739, type: 3}
-  MuzzleFlashPrefab: {fileID: 198050975068896738, guid: 6c9cca1c11f9abc4c886c6d9ee895b17, type: 3}
-  FireInFixed: 0
-  IsFiring: 0
-  IgnoreOwnRigidbody: 1
-  UseAmmo: 0
-  MaxAmmo: 300
---- !u!114 &295013360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295013352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b52a53c239048a4e8664b316fe9c8d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guns:
-  - {fileID: 295013357}
-  GimbalTarget: {fileID: 0}
---- !u!4 &514405939 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2955917929421656901, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
-  m_PrefabInstance: {fileID: 868769002630207972}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &521775135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,37 +1527,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2914627261185080884, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
   m_PrefabInstance: {fileID: 1237063137}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1163030518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1163030519}
-  m_Layer: 0
-  m_Name: Barrel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1163030519
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163030518}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.14, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 514405939}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &1237063137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2137,11 +2052,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3acb4c43da7718f4d8d3b79956dde8fe, type: 3}
---- !u!20 &525209989651289134 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 670821856676890352, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
-  m_PrefabInstance: {fileID: 1010731970947027678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &856986086004379623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 671647539381204399, guid: 3acb4c43da7718f4d8d3b79956dde8fe, type: 3}
@@ -2154,9 +2064,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1392227011}
     m_Modifications:
-    - target: {fileID: 2598872178046690049, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 295013357, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: FireDelay
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 295013357, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: MuzzleVelocity
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 295013357, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: AutoInheritVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163030519, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.042
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163030519, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2914627261185080884, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
       propertyPath: m_RootOrder
@@ -2202,18 +2128,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6905363659298998224, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
-      propertyPath: aimLimitNegY
-      value: 85
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905363659298998224, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
-      propertyPath: aimLimitPosX
-      value: -85
-      objectReference: {fileID: 0}
-    - target: {fileID: 6905363659298998224, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
-      propertyPath: aimLimitPosY
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 9153703445080074171, guid: 5e441b96f7924e74582b0b632b44dd73, type: 3}
       propertyPath: m_Name
       value: TurretFront
@@ -2227,18 +2141,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1392227011}
     m_Modifications:
-    - target: {fileID: 307034997814569432, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 525209989651289134}
-    - target: {fileID: 307034997814569432, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
-      propertyPath: aimLimitNegX
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 307034997814569432, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
-      propertyPath: aimLimitPosX
-      value: -5
-      objectReference: {fileID: 0}
     - target: {fileID: 2770841123959887258, guid: 7a2e87520822960499f8e9b4d48f133b, type: 3}
       propertyPath: m_RootOrder
       value: 8
