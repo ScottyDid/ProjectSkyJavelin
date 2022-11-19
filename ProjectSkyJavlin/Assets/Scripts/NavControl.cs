@@ -4,38 +4,27 @@ using UnityEngine;
 
 public class NavControl : MonoBehaviour
 {
-    Transform[] childObjects;
-    public List<Transform> childNodeList = new List<Transform>();
+    [SerializeField]
+    private Transform[] controlPoints;
+
+    private Vector3 gizmosPosition;
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
-
-        FillNodes();
-
-        for (int i = 0; i < childNodeList.Count; i++)
+        for (float t = 0; t <= 1; t += 0.05f)
         {
-            Vector3 currentPos = childNodeList[i].position;
-            if (i > 0)
-            {
-                Vector3 prevPos = childNodeList[i - 1].position;
-                Gizmos.DrawLine(prevPos, currentPos);
-            }
+            gizmosPosition = Mathf.Pow(1 - t, 3) * controlPoints[0].position +
+                3 * Mathf.Pow(1 - t, 2) * t * controlPoints[1].position +
+                3 * (1 - t) * Mathf.Pow(t, 2) * controlPoints[2].position +
+                Mathf.Pow(t, 3) * controlPoints[3].position;
+
+            Gizmos.DrawSphere(gizmosPosition, 0.5f);
         }
-    }
 
-    void FillNodes()
-    {
-        childNodeList.Clear();
+        Gizmos.DrawLine(new Vector3(controlPoints[0].position.x, controlPoints[0].position.y, controlPoints[0].position.z),
+            new Vector3(controlPoints[1].position.x, controlPoints[1].position.y, controlPoints[1].position.z));
 
-        childObjects = GetComponentsInChildren<Transform>();
-
-        foreach (Transform child in childObjects)
-        {
-            if(child != this.transform)
-            {
-                childNodeList.Add(child);
-            }
-        }
+        Gizmos.DrawLine(new Vector3(controlPoints[2].position.x, controlPoints[2].position.y, controlPoints[2].position.z),
+            new Vector3(controlPoints[3].position.x, controlPoints[3].position.y, controlPoints[3].position.z));
     }
 }
